@@ -29,4 +29,5 @@
 
 <h3>5. Дополнительная информация</h3>
 &nbsp &nbsp &nbsp Моя версия Python 3.9.1 [MSC v.1928 32 bit (Intel)] on win32<br>
-&nbsp &nbsp &nbsp Таблица https://docs.google.com/spreadsheets/d/1Ff9t0Kec_nyI4OBug-tljc4euUGGSUTpkLU-a4L8uPw/edit#gid=0<br>
+&nbsp &nbsp &nbsp Таблица https://docs.google.com/spreadsheets/d/1Ff9t0Kec_nyI4OBug-tljc4euUGGSUTpkLU-a4L8uPw/edit?usp=sharing<br>
+
