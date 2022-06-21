@@ -1,5 +1,5 @@
 from oauth2client.service_account import ServiceAccountCredentials
-from classed import Config, Data_base
+from Config_DataBase import Config, Data_base
 from datetime import date
 from urllib.request import urlopen
 from xml.etree import ElementTree as etree
@@ -23,10 +23,6 @@ create_table_query = '''CREATE TABLE if not exists TESTDEVSHEETS4
     PRICE_DOLLAR   REALs
     ); '''
 cur.execute(create_table_query)
-
-
-today_date = datetime.datetime.strftime(date.today(), '%d.%m.%Y').replace('.','/')
-link_dollar_rate = 'https://www.cbr.ru/scripts/XML_daily.asp?date_req='
 
 
 def connect_api():
@@ -76,20 +72,13 @@ def add_convert_dollar(values_for_psg,doll):
 
 def delivery_time(values_for_psg):
     '''
-    Delivery date check and send message telergam, if list not empty,
-    compare dates with today
+    Delivery date check and send message telergam, if list not empty
     '''
-    num_zak = []
-    date_zak = []
     delivery_time = []
-    # Create two list to combine into a dict
-    for i in values_for_psg:
-        num_zak+=[i[0]] 
-        date_zak+=[i[2]] 
-    fin = dict(zip(num_zak,date_zak))
-    for i,x in fin.items():
-        if date.today() >= datetime.datetime.strptime(x, '%d.%m.%Y').date():
-            delivery_time += [[i,x]]
+    fin = {i[0]:i[2] for i in values_for_psg}
+    for num,date_delli in fin.items():
+        if date.today() >= datetime.datetime.strptime(date_delli, '%d.%m.%Y').date():
+            delivery_time += [[num,date_delli]]
     if not delivery_time:
         return print('Not alert send')
     else:
@@ -129,10 +118,12 @@ def insert_entry_in_table(final_values_for_psg):
 
 if __name__ == '__main__':
     while True:
-        time.sleep(5)
+        today_date = datetime.datetime.strftime(date.today(), '%d.%m.%Y').replace('.','/')
+        link_dollar_rate = 'https://www.cbr.ru/scripts/XML_daily.asp?date_req='
         client = connect_api()
         doll = dollar_rate(link_dollar_rate, today_date)
         values_for_psg = get_values_sheets(client)
         final_values_for_psg = add_convert_dollar(values_for_psg,doll)
         list_delivery = delivery_time(final_values_for_psg)
         insert_entry_in_table(final_values_for_psg)
+        time.sleep(30)
