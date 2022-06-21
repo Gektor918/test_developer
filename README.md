@@ -6,10 +6,10 @@
 &nbsp &nbsp &nbsp Команда git clone https://github.com/Gektor918/test_developer
 
 <h3>2. Создаем виртуальное окружение</h3>
-&nbsp &nbsp &nbsp Команда-python3 -m venv <name_env>
+&nbsp &nbsp &nbsp Команда-python3 -m venv <name_venv>
 
 <h3>3. Запускаем виртуальное окружение</h3>
-&nbsp &nbsp &nbsp Команда-source <name_env>/bin/activate
+&nbsp &nbsp &nbsp Команда-source <name_venv>/bin/activate
 
 <h3>4. Устанавливаем зависимости</h3>
 &nbsp &nbsp &nbsp Команда - pip install -r requirements.txt
