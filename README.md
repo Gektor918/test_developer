@@ -27,7 +27,10 @@
 &nbsp &nbsp &nbsp port="5432"<br>
 &nbsp &nbsp &nbsp database="testdb"<br>
 
-<h3>7. Дополнительная информация</h3>
+<h3>7. Запуск</h3>
+&nbsp &nbsp &nbsp Находять в созданной дериктории(test_developer) из cmd запустите файл командой python main.py<br>
+
+<h3>8. Дополнительная информация</h3>
 &nbsp &nbsp &nbsp Моя версия Python 3.9.1 [MSC v.1928 32 bit (Intel)] on win32<br>
 &nbsp &nbsp &nbsp Ссылка на таблицу https://docs.google.com/spreadsheets/d/1Ff9t0Kec_nyI4OBug-tljc4euUGGSUTpkLU-a4L8uPw/edit?usp=sharing<br>
 
