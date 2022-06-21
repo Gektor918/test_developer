@@ -17,7 +17,7 @@
 
 <h3>5. Скачиваем PostgreSQL</h3>
 &nbsp &nbsp &nbsp Ссылка для выбора версий https://www.enterprisedb.com/downloads/postgres-postgresql-downloads<br>
-&nbsp &nbsp &nbsp Скачать версию 10.21<br>
+&nbsp &nbsp &nbsp Скачать версию 10.21 32 bit <br>
 &nbsp &nbsp &nbsp Запустить скачанный файл и выполнить инструкцию по установке<br>
 
 <h3>6. Создайте локальную базу данных и настройте ее вот параметры</h3>
