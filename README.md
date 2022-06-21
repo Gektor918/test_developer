@@ -18,11 +18,14 @@
 <h3>4. Скачиваем PostgreSQL</h3>
 &nbsp &nbsp &nbsp Ссылка для выбора версий https://www.enterprisedb.com/downloads/postgres-postgresql-downloads<br>
 &nbsp &nbsp &nbsp Скачать версию 10.21<br>
-&nbsp &nbsp &nbsp Запустить скачанный файл и выполнить инструкцию по установке
+&nbsp &nbsp &nbsp Запустить скачанный файл и выполнить инструкцию по установке<br>
 
+<h3>5. Создайте локальную базу данных и настройте ее вот параметры</h3>
+&nbsp &nbsp &nbsp user="postgres"<br>
+&nbsp &nbsp &nbsp password="9187112"<br>
+&nbsp &nbsp &nbsp host="127.0.0.1"<br>
+&nbsp &nbsp &nbsp port="5432"<br>
+&nbsp &nbsp &nbsp database="testdb"<br>
 
-
-<h3>1. Скачайте zip-файл с этого репозитория</h3>
-&nbsp &nbsp &nbsp https://github.com/Gektor918/test_developer<br>
-
-<h3>2. Неоходимо создать виртуальное окружение</h3>
+<h3>5. Дополнительная информация</h3>
+&nbsp &nbsp &nbsp Моя версия Python 3.9.1 [MSC v.1928 32 bit (Intel)] on win32
